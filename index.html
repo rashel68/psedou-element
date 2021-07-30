@@ -5,8 +5,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>psedou element</title>
+    <style>
+        blockquote::before{
+            content: open-quote;
+            font-size: 2em;
+            color: gray;
+            padding: 3px;
+        }
+        blockquote::after{
+            content: close-quote;
+            font-size: 2em;
+            color: gray;
+            padding: 3px;
+        }
+        blockquote::selection{
+            color: red;
+            background-color: lime;
+        }
+
+        p::first-line{
+            color: tomato;
+            font-size: 1.2em;
+        }
+        p::first-letter{
+            color: red;
+            font-size: 2em;
+        }
+        ::marker{
+            color: gray;
+            font-size: 1.5em;
+        }
+        ::placeholder{
+            color: greenyellow;
+            font-style: italic;
+        }
+        .asterisk label::after{
+            content: '*';
+            color: red;
+            margin-right: 20px;
+        }
+    </style>
 </head>
 <body>
-    
+    <section>
+        <h2>Henry Ford (::before, ::after open-quote and close-quote)</h2> <hr>
+        <blockquote>Failure is only the opportunity to begin again, only this time more wisely</blockquote>
+        <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum incidunt quo exercitationem at accusantium maiores!</blockquote>
+        <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, sunt!</blockquote>
+    </section>
+
+    <section>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima facere dolorum cumque, corrupti maxime odio magni distinctio fugit at doloremque magnam aliquam, ducimus voluptate labore inventore minus architecto sequi unde! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, in! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium qui animi quibusdam beatae ex quia deleniti distinctio amet incidunt! Odit possimus voluptates, eum quae porro ipsam placeat amet voluptas dolor obcaecati itaque, quidem omnis eligendi natus ratione nesciunt culpa aut quia ex excepturi alias nisi atque? Laudantium a id architecto aliquid ducimus exercitationem, recusandae placeat quidem eveniet voluptates libero molestiae illo ad odio quo asperiores ratione ab obcaecati itaque labore amet inventore perferendis cum. Fuga dolorum id impedit? Reprehenderit, dolorum praesentium, nostrum exercitationem minus ab eligendi voluptates distinctio cumque, molestias neque mollitia iusto velit omnis aut eaque quisquam explicabo maiores?</p>
+    </section>
+    <section>
+        <ul type="square">
+            <li>Civil</li>
+            <li>Computer</li>
+            <li>Elctornics</li>
+            <li>RAC</li>
+            <li>Mechanical</li>
+        </ul>
+        <ol>
+            <li>Bangladesh</li>
+            <li>India</li>
+            <li>Nepal</li>
+            <li>Mayanmar</li>
+            <li>Butan</li>
+        </ol>
+    </section>
+    <form action="">
+        <input type="text" name="" placeholder="Your Name" id="">
+    </form> <br><br>
+
+    <form action="">
+        <div class="asterisk">
+            <label for="name">Your Name</label> <input type="text" name="" id="name"> <br> <br>
+            <label for="email">Your Email</label> <input type="email" name="" id="email">
+        </div>
+    </form>
 </body>
 </html>
